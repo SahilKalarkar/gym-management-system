@@ -1,7 +1,8 @@
+
 import { useState, useEffect } from 'react';
 import {
     Table, Tag, Badge, Button, Input, Space, Modal, Form, DatePicker, Select,
-    Popconfirm, message, Skeleton, Row, Col, Card, Typography, Statistic
+    Popconfirm, message, Row, Col, Card, Typography
 } from 'antd';
 import {
     SearchOutlined, EditOutlined, DeleteOutlined, PlusOutlined,
@@ -343,18 +344,18 @@ export default function MembersPage() {
 
 
             {/* Members Table */}
-                <Table
-                    columns={membersColumns}
-                    dataSource={filteredMembers}
-                    rowKey="id"
-                    loading={loading}
-                    pagination={{
-                        pageSize: 10,
-                    }}
-                    rowClassName="hover:bg-white/10 transition-colors cursor-pointer"
-                    // scroll={{ x: 1000 }}
-                    size="middle"
-                />
+            <Table
+                columns={membersColumns}
+                dataSource={filteredMembers}
+                rowKey="id"
+                loading={loading}
+                pagination={{
+                    pageSize: 10,
+                }}
+                rowClassName="hover:bg-white/10 transition-colors cursor-pointer"
+                // scroll={{ x: 1000 }}
+                size="middle"
+            />
 
             {/* Add/Edit Member Modal */}
             <Modal
