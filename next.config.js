@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  trailingSlash: true,
-  images: { unoptimized: true },
-  eslint: { ignoreDuringBuilds: true }
+    images: { unoptimized: true },
+    trailingSlash: true,
+    // ✅ FIX: Empty turbopack config = Turbopack happy
+    turbopack: {}
 }
+
 module.exports = nextConfig;

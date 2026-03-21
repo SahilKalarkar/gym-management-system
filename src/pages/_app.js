@@ -2,7 +2,7 @@
 
 import "@/styles/globals.css";
 import { useRouter } from 'next/router';
-import AdminApp from './admin/_app';
+import AdminLayout from "@/components/AdminLayout";
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
@@ -19,7 +19,11 @@ export default function App({ Component, pageProps }) {
   ];
 
   if (adminPagesWithLayout.includes(pathname)) {
-    return <AdminApp Component={Component} pageProps={pageProps} />;
+    return (
+      <AdminLayout>
+        <Component {...pageProps} />
+      </AdminLayout>
+    );
   }
 
   return <Component {...pageProps} />;

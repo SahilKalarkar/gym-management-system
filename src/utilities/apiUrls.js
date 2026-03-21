@@ -1,6 +1,6 @@
 // export const GLOBAL_PATH = 'http://localhost/gym_backend/api'
 
-export const GLOBAL_PATH = '/gym_backend/api'
+export const GLOBAL_PATH = 'https://powerforgesm.ct.ws/gym_backend/api';
 
 export const LOGIN = `${GLOBAL_PATH}/auth.php`
 
