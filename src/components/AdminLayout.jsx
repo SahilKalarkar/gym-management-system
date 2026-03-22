@@ -19,7 +19,7 @@
                 <Sidebar collapsed={collapsed} onCollapse={setCollapsed} />
                 <div className={`flex-1 flex flex-col transition-all duration-300`}>
                     <HeaderComponent collapsed={collapsed} setCollapsed={setCollapsed} />
-                    <main className="flex-1 overflow-y-auto p-6 scrollbar-thin scrollbar-thumb-slate-600/50 scrollbar-track-slate-900/50 pt-4">
+                    <main className="flex-1 overflow-y-auto! p-6 scrollbar-thin! scrollbar-thumb-slate-600/50! scrollbar-track-slate-900/50 pt-4">
                         <div>{children}</div>
                     </main>
                 </div>

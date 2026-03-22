@@ -55,18 +55,18 @@ export default function Home() {
               <div className="text-2xl font-bold text-orange-500 cursor-pointer" onClick={() => scrollToSection("hero")}>
                 PowerForge
               </div>
-              <div className="hidden md:flex gap-8 text-white font-semibold">
+              <div className="hidden sm:flex gap-8 text-white font-semibold">
                 <button onClick={() => scrollToSection("hero")}>Home</button>
                 <button onClick={() => scrollToSection("about")}>About</button>
                 <button onClick={() => scrollToSection("trainers")}>Trainers</button>
                 <button onClick={() => scrollToSection("contact")}>Contact</button>
               </div>
-              <div className="flex gap-2">
+              {/* <div className="flex gap-2">
                 <Button>Sign In</Button>
                 <Button type="primary" className="bg-orange-500! hover:bg-orange-600! text-white!">
                   Sign Up
                 </Button>
-              </div>
+              </div> */}
             </div>
           </nav>
 
@@ -118,6 +118,12 @@ export default function Home() {
                     Get Started
                   </Button>
                 </div>
+                <div className="mt-2 text-sm text-gray-200 flex flex-wrap gap-3 justify-center lg:justify-start">
+                  <span className="bg-white/10 px-3 py-1 rounded-full">✔ Certified Trainers</span>
+                  <span className="bg-white/10 px-3 py-1 rounded-full">✔ 500+ Members</span>
+                  <span className="bg-white/10 px-3 py-1 rounded-full">⭐ 4.8 Rating</span>
+                </div>
+
 
                 {/* Stats - Mobile Carousel → Desktop Grid */}
                 <div className="flex sm:flex-row items-center justify-center lg:justify-start gap-6 sm:gap-8 text-white">
@@ -185,7 +191,7 @@ export default function Home() {
           {/* Trainers */}
           <section id="trainers" className="py-24 px-6 bg-gray-800">
             <h2 className="text-4xl font-bold text-center mb-16!">Meet Our Trainers</h2>
-            <div className="flex flex-wrap justify-center gap-8">
+            <div className="flex flex-wrap justify-center gap-x-8 gap-y-15">
               {trainers.map((t, i) => (
                 <div key={i} className="w-64 p-6 bg-gray-700 rounded-3xl shadow-2xl hover:scale-105 transform transition text-center">
                   <img src={t.image} className="rounded-full w-36 h-36 mx-auto -mt-20 border-4 border-orange-500 shadow-xl" />
@@ -208,6 +214,28 @@ export default function Home() {
                     <p className="text-white text-sm">{c.description}</p>
                     <Button className="mt-2! bg-orange-500! hover:bg-orange-600! text-white! w-full! border-none!">Join Now</Button>
                   </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Testimonials */}
+          <section className="py-5 px-6 bg-gray-800">
+            <h2 className="text-3xl sm:text-4xl font-bold text-center text-white mb-12">
+              What Our Members Say
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {[
+                { name: "Rahul", text: "Best gym ever! Trainers are amazing." },
+                { name: "Priya", text: "Lost 10kg in 3 months 🔥" },
+                { name: "Amit", text: "Facilities are top‑notch!" },
+              ].map((t, i) => (
+                <div
+                  key={i}
+                  className="bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-200"
+                >
+                  <p className="text-gray-300 italic">"{t.text}"</p>
+                  <h4 className="mt-4 text-orange-400 font-bold">{t.name}</h4>
                 </div>
               ))}
             </div>

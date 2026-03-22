@@ -17,4 +17,5 @@ export const PAYMENTS = `${GLOBAL_PATH}/payments.php`
 
 export const SETTINGS = `${GLOBAL_PATH}/settings.php`
 export const TRAINERS = `${GLOBAL_PATH}/trainers.php`;
+export const CONTACT = `${GLOBAL_PATH}/contact.php`;
 

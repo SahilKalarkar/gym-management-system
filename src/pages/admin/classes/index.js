@@ -336,7 +336,7 @@ export default function ClassesPage() {
                     pageSize: 10,
                 }}
                 rowClassName="hover:bg-white/10 transition-colors cursor-pointer"
-                // scroll={{ x: 1200 }}
+                // scroll={ { x: 1200 }}
                 size="middle"
             />
 
