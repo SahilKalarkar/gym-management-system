@@ -59,7 +59,7 @@ export default function HeaderComponent({ collapsed, setCollapsed }) {
                         <div className="text-gray-400 text-xs">Super Admin</div>
                     </div>
                 </Space>
-                <Button key="setting" onClick={handleSetting} icon={<SettingOutlined />} />
+                {/* <Button key="setting" onClick={handleSetting} icon={<SettingOutlined />} /> */}
                 <Button danger key="logout" onClick={handleLogout} icon={<LogoutOutlined />} />
             </Space>
         </div>
